@@ -1,1 +1,0 @@
-# project-note-app
