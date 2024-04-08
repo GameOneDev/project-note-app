@@ -1,7 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import axios from "axios";
 import {API_URL} from "./constants";
-import LoginPage from "./components/login";
 
 function App() {
 
@@ -146,7 +145,6 @@ function App() {
                 ))}
             </ul>
             </div>
-            <LoginPage />
         </div>
     );
 }
