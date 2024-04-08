@@ -1,0 +1,42 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.app{
+  display: grid;
+  grid-column: 2;
+  grid-template-columns: 70% 30%;
+  grid-row: 1;
+  grid-template-rows: 100vh;
+  background-color: #edf6f9;
+}
+
+.LoginContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-left: 1px solid rgba(0,0,0,0.25);
+}
+
+#changeModeText{
+  cursor: pointer;
+  transition: 0.1s hover;
+}
+
+#changeModeText:hover{
+  color: teal;
+  opacity: 0.8;
+}
+
+
