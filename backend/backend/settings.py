@@ -33,6 +33,7 @@ ALLOWED_HOSTS = ['alt.gameoneyt.com', '192.168.1.40', '192.168.31.120']
 INSTALLED_APPS = [
     'notes.apps.NotesConfig',
     'rest_framework',
+    'rest_framework.authtoken',
     'corsheaders',
     'django.contrib.admin',
     'django.contrib.auth',
