@@ -12,14 +12,13 @@ from django.contrib.auth import authenticate, login
 from django.shortcuts import render
 from .serializers import NoteSerializer, UserSerializer
 from .models import Note, User
+from rest_framework.authtoken.views import obtain_auth_token
 
-from rest_framework.authtoken.models import Token
 from django.contrib.auth import authenticate, login
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework import status
 
-from rest_framework.authtoken.models import Token
 
 
 class NoteView(generics.ListAPIView):
@@ -77,17 +76,32 @@ class HandleUserConnction(APIView):
     #             return Response({'error': 'User not found'}, status=status.HTTP_418_IM_A_TEAPOT)
     #     except:
     #         return Response({'error': 'System error'}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+    # def post(self, request):
+    #     username = request.data.get('login')
+    #     password = request.data.get('password')
+    #     user = authenticate(request, username=username, password=password)
+    #     if user is not None:
+    #         login(request, user)
+    #         # Generate or get an existing token for the user
+    #         token = obtain_auth_token(request._request)  # Use Token.objects.get_or_create to get or create the token
+    #         print("token: "+str(token))
+    #         return Response({'token': token.key}, status=status.HTTP_200_OK)
+    #     else:
+    #         return Response({'error': 'User not found'}, status=status.HTTP_418_IM_A_TEAPOT)
     def post(self, request):
         username = request.data.get('login')
         password = request.data.get('password')
+        if not username or not password:
+            return Response({'error': 'Please provide username and password'}, status=status.HTTP_400_BAD_REQUEST)
+
         user = authenticate(request, username=username, password=password)
         if user is not None:
             login(request, user)
             # Generate or get an existing token for the user
-            token, _ = Token.objects.get_or_create(user=user)  # Use Token.objects.get_or_create to get or create the token
+            token, _ = Token.objects.get_or_create(user=user)
             return Response({'token': token.key}, status=status.HTTP_200_OK)
         else:
-            return Response({'error': 'User not found'}, status=status.HTTP_418_IM_A_TEAPOT)
+            return Response({'error': 'Invalid credentials'}, status=status.HTTP_401_UNAUTHORIZED)
             
 
 
