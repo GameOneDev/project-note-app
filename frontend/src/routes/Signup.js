@@ -5,7 +5,7 @@ import axios from "axios";
 import {API_URL} from "../constants";
 import { Link } from "react-router-dom";
 
-function Login() {
+function Signup() {
     
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
@@ -26,10 +26,11 @@ function Login() {
         
         const params = {
             login: username,
-            password: password
+            password1: password,
+            password2: password,
         }
 
-        let userExists = await axios.post(API_URL + "handle-user-connection",params);
+        let userExists = await axios.post(API_URL + "create-user",params);
         console.log(userExists);
         if(userExists) {
             alert("Jesteś zalogowany");
@@ -46,7 +47,7 @@ function Login() {
             <Container maxw={'xs'}>
                 <Stack spacing={3} justifyContent={"center"}>
                     <Text as={"div"} fontSize={"2xl"}>
-                        Login To Existing Account
+                        Create New Account
                     </Text>
                     <InputGroup>
                         <Input
@@ -68,9 +69,9 @@ function Login() {
                     </InputGroup>
                                         
                     <Flex justify={"space-between"}>
-                        <Link to={"/auth/Signup"}>
+                        <Link to={"/auth/Login"}>
                             <Text id={'changeModeText'} color={"teal"}>
-                                Register new account                                           
+                                Already have an account?                                         
                             </Text>
                         </Link>
                         <InputGroup maxW={"fit-content"} mr={4}>
@@ -79,7 +80,7 @@ function Login() {
                                 justifyContent={"center"}
                                 onClick={formSubmit}
                             >
-                                Log In
+                                Sign Up
                             </Button>
                         </InputGroup>
                     </Flex>
@@ -90,4 +91,4 @@ function Login() {
     )
 }
 
-export default Login;
+export default Signup;
