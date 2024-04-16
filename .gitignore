@@ -27,3 +27,5 @@ yarn-error.log*
 
 /backend/.venv
 
+#other
+'Projekt2 - zadania krok po kroku.pdf'

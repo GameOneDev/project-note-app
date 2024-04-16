@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-i+^i1@1v=cscyl$0b#@rf9xm$6+wu8cl&*&-(oqe#=g1tkav#@
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['alt.gameoneyt.com', '192.168.1.40', '192.168.31.120']
+ALLOWED_HOSTS = ['alt.gameoneyt.com', '192.168.31.40', '192.168.31.120']
 
 
 # Application definition

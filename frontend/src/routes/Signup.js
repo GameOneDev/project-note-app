@@ -25,7 +25,7 @@ function Signup() {
         setPassword(password.trim());
         
         const params = {
-            login: username,
+            username: username,
             password1: password,
             password2: password,
         }
