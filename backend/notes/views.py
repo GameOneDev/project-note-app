@@ -1,6 +1,4 @@
 from django.utils import timezone
-from django.shortcuts import render
-from django.db import connection
 from rest_framework import generics, status
 from rest_framework.response import Response
 from rest_framework.views import APIView
