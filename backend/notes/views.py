@@ -54,7 +54,7 @@ class HandleUserConnction(APIView):
         username = request.data.get('login')
         password = request.data.get('password')
         if not username or not password:
-            return Response({'error': 'Please provide username and password'}, status=status.HTTP_400_BAD_REQUEST)
+            return Response({'error': 'Please provide username and password'}, status=status.HTTP_418_IM_A_TEAPOT)
 
         user = authenticate(request, username=username, password=password)
         if user is not None:
