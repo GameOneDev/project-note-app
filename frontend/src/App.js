@@ -59,7 +59,7 @@ function App() {
         const fetchData = async () => {
             try {
                 const usersResponse = await axios.get(API_URL + "users");
-                const notesResponse = await axios.get(API_URL + "notes");
+                const notesResponse = await axios.post(API_URL + "notes");
 
                 // Assuming both requests were successful
                 const usersData = usersResponse.data;

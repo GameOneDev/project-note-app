@@ -8,26 +8,32 @@ from rest_framework.authtoken.models import Token
 from django.contrib.auth import authenticate, login
 from .serializers import NoteSerializer, UserSerializer
 from .models import Note, User
+from rest_framework.authentication import TokenAuthentication
+from rest_framework.permissions import IsAuthenticated
 
 
+class NoteView(APIView):
+    authentication_classes = [TokenAuthentication]
+    permission_classes = [IsAuthenticated]
 
-
-
-class NoteView(generics.ListAPIView):
-    queryset = Note.objects.all()
-    serializer_class = NoteSerializer
-
-class UserView(generics.ListAPIView):
-    queryset = User.objects.all()
-    serializer_class = UserSerializer
+    def post(self, request):
+        user = request.user  # Get the authenticated user
+        notes = Note.objects.filter(owner=user)  # Filter notes by the authenticated user
+        serializer = NoteSerializer(notes, many=True)  # Serialize the notes
+        return Response(serializer.data, status=status.HTTP_200_OK)
+    
 
 class CreateNoteView(APIView):
+    authentication_classes = [TokenAuthentication]
+    permission_classes = [IsAuthenticated]
+    
     def post(self, request):
+        user = request.user  # Get the authenticated user
         note_text = request.data.get('note_text')
-        owner_id = request.data.get('owner')  # Assuming owner is an ID
-        print(note_text, owner_id)
+        # owner_id = request.data.get('owner')  # Assuming owner is an ID
+        print(note_text, user)
         try:
-            owner = User.objects.get(id=owner_id)
+            owner = user
             Note.objects.create(
                 note_text=note_text,
                 pub_date=timezone.now(),
@@ -35,7 +41,7 @@ class CreateNoteView(APIView):
             )
             return Response({'message': 'Note created successfully'}, status=status.HTTP_201_CREATED)
         except User.DoesNotExist:
-            return Response({'error': 'User not found'})
+            return Response({'error': 'User not found'}, status=status.HTTP_418_IM_A_TEAPOT)
     
 class CreateUserView(APIView):
 

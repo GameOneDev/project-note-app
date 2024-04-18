@@ -5,6 +5,7 @@ frontend/node_modules/
 .pnp/
 .pnp.js
 backend/backend/__pycache__/
+backend/notes/migrations/
 # testing
 coverage/
 
