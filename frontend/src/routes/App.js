@@ -1,6 +1,6 @@
 import "../App.css";
 import React, { useEffect, useState, useRef } from "react";
-import { Badge, useDisclosure } from "@chakra-ui/react";
+import { Badge, Portal, useDisclosure } from "@chakra-ui/react";
 import { Fade, ScaleFade, Slide, SlideFade, Collapse } from "@chakra-ui/react";
 import axios from "axios";
 import { API_URL } from "../constants";
@@ -402,7 +402,7 @@ function App() {
                 fetchCollab={fetchCollab}
                 addCollab={addCollab}
                 deleteCollab={deleteCollab}
-                fetchUserInfo={fetchUserInfo}
+                userInfo={userInfo}
               />
             </Box>
           ))}
@@ -425,9 +425,10 @@ function App() {
             <PopoverTrigger>
               <Button>{userInfo?.username}</Button>
             </PopoverTrigger>
-            <PopoverContent max-width={'fit-content'} >
+            <Portal>
+            <PopoverContent max-width={'fit-content'}>
               <PopoverHeader fontWeight="semibold" color={'black'}>
-                Popover placement
+              {userInfo?.username}
               </PopoverHeader>
               <PopoverCloseButton />
               <PopoverBody >
@@ -441,11 +442,12 @@ function App() {
                 </Button>
               </PopoverBody>
             </PopoverContent>
+            </Portal>
           </Popover>
 
           <Modal isOpen={isOpen2} onClose={onClose2} isCentered>
             <ModalOverlay />
-            <ModalContent h={'80%'} backdropFilter="auto" backdropBlur={"10px"} bg={"rgba(255, 255, 255, 0.5)"}>
+            <ModalContent backdropFilter="auto" backdropBlur={"10px"} bg={"rgba(100, 100, 100, 0.5)"} color={'white'}>
               <ModalHeader>Settings</ModalHeader>
               <ModalCloseButton />
               <ModalBody >

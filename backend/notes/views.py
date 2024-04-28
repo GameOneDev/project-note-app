@@ -10,7 +10,8 @@ from .serializers import NoteSerializer, UserSerializer
 from .models import Note, Note_collab
 from rest_framework.authentication import TokenAuthentication
 from rest_framework.permissions import IsAuthenticated
-from django.db.models import Q
+from django.db import models
+from django.db.models import Case, When, F, Q
 
 
 
@@ -77,7 +78,14 @@ class NoteView(APIView):
         notes = Note.objects.filter(
             Q(owner=user) | Q(note_collab__collaborant_id=user),
             vissible=True
-        ).prefetch_related('note_collab_set__collaborant').order_by('-pub_date').distinct()[:limit]
+        ).prefetch_related('note_collab_set__collaborant').order_by(
+            Case(
+                When(edit_date__isnull=False, then=F('edit_date')),
+                default=F('pub_date'),
+                output_field=models.DateTimeField(), 
+                nulls_last=True
+            )
+        ).distinct()[::-1][:limit]
 
         serializer = NoteSerializer(notes, many=True)  # Serialize the notes
         return Response(serializer.data, status=status.HTTP_200_OK)
@@ -175,13 +183,34 @@ class AddCollaborate(APIView):
         user = request.user  # Get the authenticated user
         collaborant_id = request.data.get('collaborant_id')
         note_id = request.data.get('note_id')
+
+        is_owner = Note.objects.filter(
+            id=note_id,
+            owner_id = user
+        ).exists()
+
+        if not is_owner:
+            return Response({'error': 'You are not an owner'}, status=status.HTTP_418_IM_A_TEAPOT)
+
+
+        # Check if collaboration already exists
+        collaboration_exists = Note_collab.objects.filter(
+            note_id=note_id,
+            collaborant_id=collaborant_id
+        ).exists()
+
+        if collaboration_exists:
+            return Response({'error': 'Collaboration already exists'}, status=status.HTTP_418_IM_A_TEAPOT)
+
+        # Collaboration does not exist, create it
+
         try:
             Note_collab.objects.create(
                 note_id = note_id,
                 collaborant_id = collaborant_id
 
             )
-            return Response({'message': 'collaborant added successfully'}, status=status.HTTP_201_CREATED)
+            return Response({'message': 'Collaborant added successfully'}, status=status.HTTP_201_CREATED)
         except User.DoesNotExist:
             return Response({'error': 'User not found'}, status=status.HTTP_418_IM_A_TEAPOT)
 
@@ -193,10 +222,26 @@ class DeleteCollaborate(APIView):
         user = request.user  # Get the authenticated user
         collaborant_id = request.data.get('collaborant_id')
         note_id = request.data.get('note_id')
-       
+
+        is_owner = Note.objects.filter(
+            id=note_id,
+            owner_id = user
+        ).exists()
+
+        if not (is_owner or int(collaborant_id) is int(user.id)):
+            return Response({'error': 'You are not an owner '+str(collaborant_id)+" user "+str(user.id)+" aaaa: "+str((is_owner or int(collaborant_id) is int(user.id)))}, status=status.HTTP_418_IM_A_TEAPOT)
+        
+        collaboration_exists = Note_collab.objects.filter(
+            note_id=note_id,
+            collaborant_id=collaborant_id
+        ).exists()
+
+        if not collaboration_exists:
+            return Response({'error': 'Collaboration doesnt exists'}, status=status.HTTP_418_IM_A_TEAPOT)
+
         try:
             Note_collab.objects.filter(note_id=note_id,collaborant_id = collaborant_id).delete()
-            return Response({'message': 'collaborant removed successfully'}, status=status.HTTP_201_CREATED)
+            return Response({'message': 'Collaborant removed successfully'}, status=status.HTTP_201_CREATED)
         except User.DoesNotExist:
             return Response({'error': 'User not found'}, status=status.HTTP_418_IM_A_TEAPOT)
 

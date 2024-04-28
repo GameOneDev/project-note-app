@@ -40,7 +40,7 @@ export default function Note({
   fetchCollab,
   addCollab,
   deleteCollab,
-  fetchUserInfo,
+  userInfo,
 }) {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const {
@@ -51,7 +51,6 @@ export default function Note({
   const [collaborators, setCollaborators] = useState([]);
 
   const [searchTerm, setSearchTerm] = useState("");
-  const [userInfo, setUserInfo] = useState(null);
 
   const formatDate = (dateString) => {
     const date = new Date(dateString);
@@ -74,6 +73,7 @@ export default function Note({
     return formattedDate;
   };
 
+
   useEffect(() => {
     if (isOpen2) {
       // Fetch collaborators when the drawer is opened
@@ -81,11 +81,7 @@ export default function Note({
         setCollaborators(data);
       });
     }
-    fetchUserInfo().then((userInfo) => {
-      // Update the state with the fetched user info
-      setUserInfo(userInfo);
-    });
-  }, [isOpen2, fetchCollab, noteCollab, fetchUserInfo]);
+  }, [isOpen2, fetchCollab, noteCollab]);
 
   const filteredCollaborators = collaborators.filter((collab) =>
     collab.username.toLowerCase().includes(searchTerm.toLowerCase())
@@ -105,17 +101,17 @@ export default function Note({
       _active={{ bg: "teal.700" }}
       position="relative" // Ensure the lock icon is positioned correctly
     >
-      {/* {noteProtect && (
+      {noteProtect && (
         <LockIcon
           color="gray.500"
           position="absolute"
           top={0}
           right={0}
-          transform="translate(50%, -50%)"
+          transform="translate(-10%, 10%)"
           fontSize="2xl"
           // zIndex={1} // Ensure the lock icon is above the content
         />
-      )} */}
+      )}
       <CardBody>{noteDescription}</CardBody>
       <CardFooter color={"gray.200"} fontSize={"xs"} pt={0}>
         <Tooltip

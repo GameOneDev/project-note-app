@@ -1,9 +1,9 @@
 .rightBox {
-  /* overflow: auto; */
-  /* scrollbar-width: none; */
-  /* -ms-overflow-style: none; */
+  overflow: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
 .rightBox::-webkit-scrollbar {
-  /* display: none; */
+  display: none;
 }
