@@ -1,0 +1,454 @@
+id,note_text,pub_date,owner_id,vissible,protected,edit_date
+1,tesnoteeee,2024-04-18 13:34:17.391301,5,1,0
+2,tesnoteeee2,2024-04-18 13:34:42.369615,5,1,0
+3,,2024-04-18 13:35:25.371532,3,0,0
+4,monke is the best ever,2024-04-18 14:37:30.818894,5,1,1
+5,and NaN is also good,2024-04-18 14:59:26.646609,5,1,0
+6,Borbiaż gdzie moje 10$💔,2024-04-18 15:00:00.046980,5,1,1
+7,hmmmm,2024-04-18 15:00:25.313998,5,0,0
+8,bruhhhhh,2024-04-18 15:00:30.619863,5,0,0
+9,jntrovijneoretnovneortuvnoerutnvoeiurntvoueinrvouinetoviunetroivunerovuinerovuinerotvuinerotiuvneoriuvnoritvnoieuthueotheoitugeoirujtgoirjetoguerotuigjeoriutgjoieurtjogiuerjotgiuejroitgujeoirutgjoeirutjgoiuejrtoguijerotiugjoeriutjgoeriujtgoiuerjtgoiuetogujeroitugjoierutjgoieurjtgouerjtgoiujertgoiuj,2024-04-18 15:19:43.402578,5,0,0
+10,very good bro.......,2024-04-18 15:19:57.177224,5,0,0
+11,awdwa,2024-04-22 14:26:59.337666,6,0,0
+12,"dwada
+",2024-04-22 14:27:43.722819,6,0,0
+13,False,2024-04-22 15:23:46.357370,5,0,0
+14,False,2024-04-22 15:23:55.732588,5,0,0
+15,False,2024-04-22 15:24:16.648033,5,0,0
+16,False,2024-04-22 15:24:30.389123,5,0,0
+17,dewdwed,2024-04-22 15:24:46.216194,5,0,0
+18,w,2024-04-22 15:26:39.044534,5,0,0
+19,aaaa,2024-04-22 15:27:32.272318,5,0,0
+21,"this fffire out of control
+
+
+burn this city",2024-04-22 23:04:10.000016,2,0,0
+22,"zsl is the best, i swear",2024-04-22 23:51:19.510636,2,0,0
+23,"zsl is the best, i swearcv",2024-04-22 23:53:41.725922,2,0,0
+24,"zsl is the best, i swearcvewfef",2024-04-22 23:54:46.640580,2,0,0
+25,why no?,2024-04-22 23:54:55.185438,2,0,0
+26,"W końcu idę ćpać) o 2:50.......
+
+
+
+taaaa",2024-04-22 23:56:52.301227,5,1,0
+27,fcc,2024-04-23 11:54:52.948623,5,0,0
+28,dbbddb,2024-04-23 12:02:58.671687,5,0,0
+29,Monke ma już prafffko :),2024-04-25 07:17:05.904696,5,1,1
+30,https://prod.liveshare.vsengsaas.visualstudio.com/join?11B45641BAF7C70FAB8C3B52D7071E1AAF25,2024-04-25 07:36:15.124083,5,0,0
+31,czysta notatka,2024-04-25 07:42:44.034848,2,1,0
+32,"Ćpun = debil
+
+pijak, alkoholik, degenerata",2024-04-25 10:00:47.279385,3,0,0
+33,"#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    cout << ""Hello Monke!\n"";
+    int* ptr = new int[5];
+    for (int i = 0; i < 5; i++) {
+        ptr[i] = 100 + 2 * i;
+    }
+    cout << ""The base address is "" << ptr << endl;
+    cout << ""Value at base address is "" << *ptr << endl;
+    cout << ""Value at base address + 1 is "" << *ptr + 1 << endl;
+    cout << "" Value at first index is "" << *(ptr + 1) << endl;
+    cout << ""Address of first index is "" << (ptr+1) << endl;
+    cout << ""Value at second index is "" << ptr[2] << endl;
+    cout << ""Changing the value at second index\n"";
+        * (ptr + 2) = 200;
+    cout << ""New value at second index is "" << *(ptr + 2) << endl;
+    ptr++;
+    cout << ""The pointer now points to "" << *ptr << endl;
+
+
+
+}
+",2024-04-25 10:14:06.607692,3,1,0
+34,"Sprawdzian WOS:
+
+Grupa 1
+
+1. Wymień stopnie samorządu terytorialnego (0-3)
+
+2. Dokonaj podziału powiatów w Polsce i podaj przykłady tych powiatów w najbliższej okolicy (0-4)
+
+3. Wymień organy władzy na poziomie województwa (0-2)
+
+4. Podaj po 3 zadania własne dla każdego stopnia samorządu terytorialnego (0-9)
+---------
+
+Grupa 2
+
+1. Wymień rodzaje gmin w Polsce i podaj przykłady takich gmin w najbliższej okolicy (0-6)
+
+2. Wymień organy władzy na poziomie powiatu grodzkiego (0-2)
+
+3. Podaj po 3 zadania własne dla każdego stopnia samorządu terytorialnego (0-9)
+
+4. Podaj przykład zadania zleconego gminie przez państwo (0-1)
+
+-------------
+5. Wypisz tylko zdania prawdziwe. (0-1):
+a. Gminy dzielą się na wiejskie, miejskie i grodzkie.
+
+b. Władza uchwałodawcza w gminie należy do rady miasta.
+
+c. Na czele powiatu stoi starosta.
+
+d. Do zadań powiatu należy finansowanie szkolnictwa ponadpodstawowego.
+
+e. Przedstawicielem rządu w samorządzie terytorialnym jest wojewoda.
+
+f. Kadencja władz samorządowych trwa 6 lat.
+",2024-04-25 10:17:09.488283,3,1,0
+35,"Grupa 1
+
+1. Wymień stopnie samorządu terytorialnego (0-3)
+
+2. Dokonaj podziału powiatów w Polsce i podaj przykłady tych powiatów w najbliższej okolicy (0-4)
+
+3. Wymień organy władzy na poziomie województwa (0-2)
+
+4. Podaj po 3 zadania własne dla każdego stopnia samorządu terytorialnego (0-9)
+
+5. Wypisz tylko zdania prawdziwe. (0-1)
+
+a. Gminy dzielą się na wiejskie, miejskie i grodzkie.
+
+c. Na czele powiatu stoi starosta.
+
+d. Do zadań powiatu należy finansowanie szkolnictwa ponadpodstawowego.
+
+e. Przedstawicielem rządu w samorządzie terytorialnym jest wojewoda.
+
+f. Kadencja władz samorządowych trwa 6 lat.
+
+15°C
+
+Duze zachmurz
+
+Widok
+
+Grupa 2
+
+1. Wymień rodzaje gmin w Polsce i podaj przykłady takich gmin w najbliższej okolicy (0-6)
+
+2. Wymień organy władzy na poziomie powiatu grodzkiego (0-2)
+
+3. Podaj po 3 zadania własne dla każdego stopnia samorządu terytorialnego (0-9)
+
+4. Podaj przykład zadania zleconego gminie przez państwo (0-1)
+
+b. Władza uchwałodawcza w gminie należy do rady miasta.",2024-04-25 10:18:26.181853,2,0,0
+36,"Bierzcie i jedzcie z tego wszyscy!
+#include <iostream>
+using namespace std;
+
+class Utility
+{
+public:
+    int* wsk;
+    Utility()
+    {
+        wsk = new int[10];
+        for (int i = 0; i < 10; i++)
+        {
+            *(wsk + i) = (i + 2) * 5 % 17;
+            cout << *(wsk + i) << endl;
+        }
+    }
+
+    void MinMax(int& min, int& max)
+    {
+        min = *wsk;
+        max = *wsk;
+        for (int i = 0; i < 10; i++)
+        {
+            if (min > *(wsk + i)) min = *(wsk + i);
+            if (max < *(wsk + i)) max = *(wsk + i);
+        }
+    }
+};
+
+
+
+int main()
+{
+    /*int* wsk = new int[5];
+
+    for (int i = 0; i < 5; i++)
+    {
+        wsk[i] = 100 + 2 * i;
+    }
+
+    cout << ""The nase addres is: "" << wsk << endl;
+    cout << ""First value: "" << *wsk<<endl;
+    cout << ""Second value: "" << *(wsk + 1) << endl;*/
+    Utility obj;
+    int min, max;
+    obj.MinMax(min, max);
+    cout << ""min: "" << min << endl;
+    cout << ""max: "" << max << endl;
+
+}
+
+",2024-04-25 10:23:16.349798,6,1,0
+37,BANAN NIE UMIE W FRONTEND,2024-04-25 10:27:22.196859,7,0,0
+38,"Ćpun = debil
+
+pijak, alkoholik, degenerata",2024-04-25 10:28:10.514132,6,1,0
+39,degenerat alkoholowy nie słyszy jak z 2 metów mówi się do niego Proszę Pana kret głuchy,2024-04-25 10:30:10.197691,6,1,0
+40,"To pawrda, degenerat alkoholik jest debilem i ćpunem
+
+Macie odpowiedzi od wosu?",2024-04-25 10:31:16.538857,3,0,0
+41,ćpun = ślepy kretyn kurwa..... Degenerat,2024-04-25 10:36:55.435754,3,0,0
+42,"#include <iostream>
+using namespace std;
+
+class Utility
+{
+public:
+    int* wsk;
+    Utility()
+    {
+        wsk = new int[10];
+        for (int i = 0; i < 10; i++)
+        {
+            *(wsk + i) = (i + 2) * 5 % 17;
+            cout << *(wsk + i) << endl;
+        }
+    }
+
+    void MinMax(int& min, int& max)
+    {
+        min = *wsk;
+        max = *wsk;
+        for (int i = 0; i < 10; i++)
+        {
+            if (min > *(wsk + i)) min = *(wsk + i);
+            if (max < *(wsk + i)) max = *(wsk + i);
+        }
+    }
+
+};
+
+
+class List
+{
+public:
+    int pole;
+    List* next;
+    List()
+    {
+        next = NULL;
+        pole = 0;
+    }
+};
+
+
+
+int main()
+{
+    /*int* wsk = new int[5];
+
+    for (int i = 0; i < 5; i++)
+    {
+        wsk[i] = 100 + 2 * i;
+    }
+
+    cout << ""The nase addres is: "" << wsk << endl;
+    cout << ""First value: "" << *wsk<<endl;
+    cout << ""Second value: "" << *(wsk + 1) << endl;
+    Utility obj;
+    int min, max;
+    obj.MinMax(min, max);
+    cout << ""min: "" << min << endl;
+    cout << ""max: "" << max << endl;*/
+
+
+    List* a, * b, * c;
+    a = new List();
+    b = new List();
+    c = new List();
+
+    a->pole = 1;
+    b->pole = 2;
+    c->pole = 3;
+
+    a->next = b;
+    b->next = c;
+    c->next = NULL;
+
+    List* temp = a;
+    while (temp != NULL)
+    {
+        cout << temp->pole << endl;
+        temp = temp->next;
+    }
+}
+
+",2024-04-25 11:14:02.763348,6,1,0
+43,"Dla wszystkich nie myślących osób
+List* temp = new List();
+int ilosc;
+cin >> ilosc;
+List* iter = temp;
+for (int i = 0; i < ilosc; i++)
+{
+    cout << ""Wprowadz pole o indexie "" << i << "":"" << endl;
+    cin >> temp->pole;
+    temp->next = new List();
+    temp = temp->next;
+}
+while (iter->next != NULL)
+{
+    cout << iter->pole << endl;
+    iter = iter->next;
+}",2024-04-25 11:31:10.782788,6,1,0
+44,"Chat:
+Oczywiście, pomogę z rozwiązaniem sprawdzianu z WOS-u. Zaczniemy od Grupy 1:
+
+Grupa 1:
+
+Stopnie samorządu terytorialnego:
+Gmina
+Powiat
+Województwo
+Podział powiatów w Polsce:
+Przykłady powiatów w najbliższej okolicy:
+Powiat X
+Powiat Y
+Organy władzy na poziomie województwa:
+Sejmik Województwa
+Zarząd Województwa
+Zadania własne dla każdego stopnia samorządu terytorialnego:
+Gmina:
+Zarządzanie lokalną infrastrukturą drogową
+Ochrona zdrowia publicznego
+Gospodarka komunalna i mieszkaniowa
+Powiat:
+Edukacja zawodowa
+Transport publiczny
+Bezpieczeństwo publiczne
+Województwo:
+Rozwój regionalny
+Ochrona środowiska
+Kultura i dziedzictwo narodowe
+Teraz przejdźmy do Grupy 2:
+
+Grupa 2:
+
+Rodzaje gmin w Polsce:
+Wiejska
+Miejska
+Miejsko-wiejska
+Przykłady gmin w najbliższej okolicy:
+Gmina A
+Gmina B
+Organy władzy na poziomie powiatu grodzkiego:
+Rada Powiatu
+Zarząd Powiatu
+Zadania własne dla każdego stopnia samorządu terytorialnego:
+Gmina:
+Gospodarka odpadami komunalnymi
+Opieka nad zdrowiem zwierząt
+Kształtowanie polityki lokalnej
+Powiat:
+Budowa i utrzymanie dróg powiatowych
+Nadzór nad ochroną zabytków
+Wspieranie rozwoju przedsiębiorczości lokalnej
+Województwo:
+Tworzenie planów zagospodarowania przestrzennego
+Rozwój infrastruktury drogowej regionalnej
+Promocja regionu
+Przykład zadania zleconego gminie przez państwo:
+Organizacja wyborów
+Zdanie prawdziwe:
+a. Gminy dzielą się na wiejskie, miejskie i grodzkie.",2024-04-25 11:45:18.003211,3,0,0
+45,"Gemini:
+Grupa 1
+1. Stopnie samorządu terytorialnego:
+
+Gmina
+Powiat
+Województwo
+2. Podział powiatów w Polsce:
+
+Powiaty ziemskie: obejmujące gminy wiejskie i miejsko-wiejskie (np. Powiat Poznański, Powiat Gnieźnieński)
+Powiaty grodzkie: obejmujące gminy miejskie (np. Miasto Poznań, Miasto Gniezno)
+3. Organy władzy na poziomie województwa:
+
+Sejmik Województwa
+Zarząd Województwa
+4. Zadania własne dla każdego stopnia samorządu terytorialnego:
+
+Gmina:
+
+Gospodarka komunalna (np. wodociągi, kanalizacja, wywóz śmieci)
+Ochrona środowiska
+Edukacja przedszkolna
+Opieka społeczna
+Kultura
+Powiat:
+
+Szkolnictwo ponadpodstawowe
+Opieka zdrowotna
+Drogi powiatowe
+Bezpieczeństwo publiczne
+Kultura
+Województwo:
+
+Rozwój regionalny
+Transport regionalny
+Kultura
+Turystyka
+Ochrona środowiska
+Grupa 2
+1. Rodzaje gmin w Polsce:
+
+Gmina wiejska
+Gmina miejsko-wiejska
+Gmina miejska
+Przykłady:
+
+Gmina wiejska: Kórnik
+Gmina miejsko-wiejska: Murowana Goślina
+Gmina miejska: Poznań
+2. Organy władzy na poziomie powiatu grodzkiego:
+
+Rada Miasta
+Prezydent Miasta
+3. Zadania własne dla każdego stopnia samorządu terytorialnego:
+
+Gmina: (patrz wyżej)
+
+Powiat: (patrz wyżej)
+
+Województwo: (patrz wyżej)
+
+4. Przykład zadania zleconego gminie przez państwo:
+
+Prowadzenie rejestru wyborców
+5. Zdania prawdziwe:
+
+a. Gminy dzielą się na wiejskie, miejskie i grodzkie. (Prawda)
+b. Władza uchwałodawcza w gminie należy do rady miasta. (Prawda)
+c. Na czele powiatu stoi starosta. (Prawda)
+d. Do zadań powiatu należy finansowanie szkolnictwa ponadpodstawowego. (Prawda)
+e. Przedstawicielem rządu w samorządzie terytorialnym jest wojewoda. (Prawda)
+f. Kadencja władz samorządowych trwa 5 lat. (Fałsz, kadencja trwa 5 lat)",2024-04-25 11:45:31.989763,3,0,0
+46,Zaprojektować aplikację,2024-04-25 12:46:05.050427,5,0,0
+47,Zaprojektować aplikację,2024-04-25 12:46:10.164388,5,0,0
+48,Zaprojektować aplikację,2024-04-25 12:46:25.896418,5,0,0
+49,Zaprojektować aplikację,2024-04-25 12:46:31.900082,5,0,0
+50,Zaprojektować aplikację,2024-04-25 12:46:32.035048,5,0,0
+51,Zaprojektować aplikację,2024-04-25 12:46:36.326253,5,0,0
+52,Zaprojektować aplikację,2024-04-25 12:46:37.304471,5,0,0
+53,Zaprojektować aplikację,2024-04-25 12:46:37.305562,5,0,0
+54,"Features:
+
+Created switch to Edited, on hover show Created date",2024-04-25 18:55:33.750080,3,1,0
+55,haloooo,2024-04-25 22:16:15.623868,5,1,0

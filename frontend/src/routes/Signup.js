@@ -1,6 +1,6 @@
 import {useEffect, useState} from "react";
 import {getCookie, setCookie} from "../utils/cookies";
-import {Button, Container, Input, InputGroup, Stack, Text, Flex,Spacer} from "@chakra-ui/react";
+import {Button, Container, Input, InputGroup, Stack, Text, Flex,Spacer, Box} from "@chakra-ui/react";
 import axios from "axios";
 import {API_URL} from "../constants";
 import { Link } from "react-router-dom";
@@ -42,15 +42,25 @@ function Signup() {
     }
 
     return (
-
+        <Box color={'white'} bg={'gray.800'}>
         <div className="LoginContainer" style={{height:"100vh"}}>
-            <Container maxw={'xs'}>
-                <Stack spacing={3} justifyContent={"center"}>
-                    <Text as={"div"} fontSize={"2xl"}>
+            <Container maxw={'xs'}
+                border='solid 3px' 
+                padding={'10px'}
+                focusBorderColor={'teal.600'}
+                borderColor={'teal.500'}
+                borderRadius={10}
+            >
+                <Stack spacing={3} 
+                        justifyContent={"center"}>
+                    <Text as={"div"} fontSize={"4xl"}>
                         Create New Account
                     </Text>
                     <InputGroup>
                         <Input
+                            spellCheck={false}
+                            focusBorderColor={'teal.600'}
+                            borderColor={'teal.500'}
                             type="text"
                             placeholder='Login'
                             _placeholder={{opacity: 0.4, color: 'inherit'}}
@@ -60,6 +70,8 @@ function Signup() {
                     </InputGroup>
                     <InputGroup>
                         <Input
+                            focusBorderColor={'teal.600'}
+                            borderColor={'teal.500'}
                             type="password"
                             placeholder='Password'
                             _placeholder={{opacity: 0.4, color: 'inherit'}}
@@ -87,6 +99,7 @@ function Signup() {
                 </Stack>
             </Container>
         </div>
+        </Box>
 
     )
 }
