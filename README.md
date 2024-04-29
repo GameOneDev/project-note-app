@@ -1,4 +1,3 @@
-
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -40,6 +39,36 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
+## Functionalities
+
+### 1. Creating Note
+
+Users can create new notes within the application. These notes can include text, images, or other content as per user requirements.
+
+### 2. Editing Note
+
+Users have the ability to edit existing notes. They can modify the text, add or remove content, or change the formatting of the note.
+
+### 3. Removing Note
+
+Users can delete notes they no longer need. This action permanently removes the note from the application.
+
+### 4. Accounts (Login, Logout, Registration)
+
+The application supports user accounts, allowing users to register, log in, and log out. Each user has their own set of notes and preferences associated with their account.
+
+### 5. Collaborators (and Editing Collaborators)
+
+Users can collaborate with others by sharing their notes. They can invite other users to collaborate on a note, allowing them to view and edit it together.
+
+### 6. Background Image URL Editing
+
+Users can customize the background image of their notes by providing a URL to an image of their choice. This adds a personal touch to their notes.
+
+### Future Enhancements
+
+In future updates, the application plans to introduce profile customization features, allowing users to personalize their profiles with custom avatars, themes, or other elements.
+
 ## Learn More
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
@@ -70,9 +99,13 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
-### Group
+
+
+
+### Group members:
 - David T.
 - Denys M.
 - Piotr G.
 - Olaf W.
 - Sebastian S.
+
