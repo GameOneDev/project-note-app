@@ -119,6 +119,14 @@ class EditNoteView(APIView):
         user = request.user  # Get the authenticated user
         note_text = request.data.get('note_text')
         note_id = request.data.get('note_id')
+
+        is_owner = Note.objects.filter(
+            id=note_id,
+            owner_id = user
+        ).exists()
+
+        if not is_owner:
+            return Response({'error': 'You are not an owner'}, status=status.HTTP_418_IM_A_TEAPOT)
     
         try:
             db_note = Note.objects.get(id=note_id)
@@ -136,9 +144,19 @@ class EditNoteView(APIView):
 class HideNoteView(APIView):
     authentication_classes = [TokenAuthentication]
     permission_classes = [IsAuthenticated]
+
     def post(self,request):
         user = request.user  # Get the authenticated user
         note_id = request.data.get('note_id')
+
+        is_owner = Note.objects.filter(
+            id=note_id,
+            owner_id = user
+        ).exists()
+
+        if not is_owner:
+            return Response({'error': 'You are not an owner'}, status=status.HTTP_418_IM_A_TEAPOT)
+
         try:
             owner = user
             Note.objects.filter(id=note_id).delete()
@@ -154,6 +172,14 @@ class DeleteNoteView(APIView):
         user = request.user  # Get the authenticated user
         note_id = request.data.get('note_id')
         hide = request.data.get('hide', True)
+
+        is_owner = Note.objects.filter(
+            id=note_id,
+            owner_id = user
+        ).exists()
+
+        if not is_owner:
+            return Response({'error': 'You are not an owner'}, status=status.HTTP_418_IM_A_TEAPOT)
 
         if hide in (0, 1):  # Check if 'hide' is either 0 or 1
             try:

@@ -408,7 +408,7 @@ function App() {
           ))}
         </VStack>
         <Card
-          h={"8%"}
+          // h={"8%"}
           position={"sticky"}
           bottom={0}
           left={0}
@@ -422,21 +422,21 @@ function App() {
           // onClick={onOpen2}
         >
           <Popover placement="top-start">
-            <PopoverTrigger>
-              <Button>{userInfo?.username}</Button>
+            <PopoverTrigger >
+              <Button bg="rgba(26, 32, 44, 0.5)" color={'white'}>{userInfo?.username}</Button>
             </PopoverTrigger>
             <Portal>
-            <PopoverContent max-width={'fit-content'}>
-              <PopoverHeader fontWeight="semibold" color={'black'}>
+            <PopoverContent max-width={'fit-content'} bg={'gray.800'} color="white">
+              <PopoverHeader fontWeight="semibold">
               {userInfo?.username}
               </PopoverHeader>
               <PopoverCloseButton />
               <PopoverBody >
-                <Button onClick={onOpen2} w={'100%'}>
+                <Button onClick={onOpen2} w={'100%'} bg={'gray.800'} color="white">
                   <SettingsIcon marginRight={"2"} />
                   Settings (concept)
                 </Button>
-                <Button onClick={handleLogout} w={'100%'}>
+                <Button onClick={handleLogout} w={'100%'} bg={'gray.800'} color="white">
                   <WarningIcon marginRight={"2"}/>
                   Logout
                 </Button>

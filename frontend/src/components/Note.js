@@ -120,6 +120,9 @@ export default function Note({
         bg="teal.400">
         {note.edit_date === null ? "Created: "+formatDate(note.pub_date): "Edited: "+formatDate(note.edit_date)}
         </Tooltip>
+        <Badge>
+          {note.pk}
+        </Badge>
       </CardFooter>
       <CardFooter color={"gray.200"} fontSize={"xs"} pt={0} alignItems='baseline'>
           
